@@ -7,7 +7,10 @@
     <color name="white">#FFFFFF</color>
     <color name="green">#4CAF50</color>
     <color name="red">#D80027</color>
+    <color name="gray_very_light">#E0E0E0</color>
 
     <color name="primary_text">#000000</color>
     <color name="secondary_text">#727272</color>
+    <color name="text_primary">#000000</color>
+
 </resources>

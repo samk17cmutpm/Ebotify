@@ -1,6 +1,5 @@
 package com.eboltify.sales.ui.splash
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.animation.AnimationUtils
@@ -14,7 +13,7 @@ import com.eboltify.sales.ui.main.MainActivity
 class SplashActivity : BaseActivity() {
 
     companion object {
-        val SPLASH_TIME_OUT : Long = 200;
+        val SPLASH_TIME_OUT : Long = 300;
     }
 
     @BindView(R.id.imgLogo)

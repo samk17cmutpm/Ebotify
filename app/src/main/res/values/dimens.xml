@@ -3,4 +3,39 @@
     <dimen name="toolbar_title_size">20dp</dimen>
     <dimen name="common_padding">20dp</dimen>
     <dimen name="common_margin">20dp</dimen>
+
+    <dimen name="large_text">14sp</dimen>
+    <dimen name="medium_text">14sp</dimen>
+
+    <dimen name="primary_text_size">14sp</dimen>
+    <dimen name="secondary_text_size">12sp</dimen>
+    <dimen name="header_text_size">20sp</dimen>
+
+    <!-- More Fragment-->
+    <dimen name="more_item_height">70dp</dimen>
+    <dimen name="more_item_content_padding">16dp</dimen>
+    <dimen name="more_item_content_margin">16dp</dimen>
+    <dimen name="more_item_icon_size">15dp</dimen>
+    <dimen name="more_line_margin_start">70dp</dimen>
+    <dimen name="more_line_height">1dp</dimen>
+
+    <!-- Custom Background Button -->
+    <dimen name="custom_button_bg_stroke">1dp</dimen>
+    <dimen name="custom_button_bg_radius">10dp</dimen>
+
+    <!-- Items Management -->
+    <dimen name="items_management_bt_size">60dp</dimen>
+    <dimen name="items_management_padding_content">20dp</dimen>
+    <dimen name="items_management_items_margin">5dp</dimen>
+
+    <!-- All Items -->
+    <dimen name="items_all_height">60dp</dimen>
+    <dimen name="items_all_margin">5dp</dimen>
+
+    <!-- Items Create -->
+    <dimen name="items_create_padding">10dp</dimen>
+    <dimen name="items_create_margin">5dp</dimen>
+
+    <!-- Color Picker -->
+    <dimen name="color_picker_size">100dp</dimen>
 </resources>

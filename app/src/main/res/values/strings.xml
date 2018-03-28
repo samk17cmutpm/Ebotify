@@ -8,5 +8,38 @@
     <string name="bottom_navigation_reports">Reports</string>
     <string name="bottom_navigation_more">More</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- More Fragment-->
+    <string name="more_items">Items</string>
+    <string name="more_customer_care">Customers Care</string>
+    <string name="more_settings">Settings</string>
+    <string name="more_sign_out">Sign Out</string>
+
+    <!-- Items Management -->
+    <string name="items_management_list_all_items">All Items</string>
+    <string name="items_management_categories">Categories</string>
+    <string name="items_management_modifier">Modifier</string>
+    <string name="items_management_discount">Discount</string>
+
+    <!-- Items Create -->
+    <string name="items_create">Create Item</string>
+    <string name="items_create_header">Item Description</string>
+    <string name="items_create_please_enter_your_item_name">Name</string>
+    <string name="items_create_please_enter_your_item_description">Description</string>
+    <string name="items_create_categories">Categories</string>
+    <string name="items_create_sold_by">Sold By</string>
+    <string name="items_create_sold_by_each">Each</string>
+    <string name="witems_create_sold_by_eight">Weight</string>
+    <string name="items_create_please_enter_your_item_price">Price</string>
+    <string name="items_create_please_enter_your_item_sku">SKU</string>
+
+    <string name="items_create_representation_header">Representation On eboltify</string>
+    <string name="items_create_representation_by_color">Color</string>
+    <string name="items_create_representation_by_image">Image</string>
+    <string name="items_create_representation_upload_file">Upload Image File</string>
+    <string name="items_create_representation_camera">Take Photo</string>
+
 
 </resources>

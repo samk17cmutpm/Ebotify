@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eboltify.sales.ui.items_management.ItemsManagementActivity">
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical"
+        android:padding="@dimen/items_management_padding_content">
+
+        <RelativeLayout
+            android:id="@+id/list_all_items"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/items_management_bt_size"
+            android:layout_above="@+id/sign_in_by_email"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/items_management_items_margin"
+            android:layout_marginTop="@dimen/items_management_items_margin"
+            android:background="@drawable/custom_button_bg"
+            android:foreground="?selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/list_all_items_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                app:srcCompat="@drawable/ic_items" />
+
+            <TextView
+                android:id="@+id/list_all_items_ic_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/list_all_items_ic"
+                android:layout_toRightOf="@+id/list_all_items_ic"
+                android:text="@string/items_management_list_all_items"
+                android:textAllCaps="false"
+                android:textColor="@color/md_amber_500"
+                android:textSize="@dimen/primary_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/categories"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/items_management_bt_size"
+            android:layout_above="@+id/sign_in_by_email"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/items_management_items_margin"
+            android:layout_marginTop="@dimen/items_management_items_margin"
+            android:background="@drawable/custom_button_bg"
+            android:foreground="?selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/categories_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                app:srcCompat="@drawable/ic_categories" />
+
+            <TextView
+                android:id="@+id/categories_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/categories_ic"
+                android:layout_toRightOf="@+id/categories_ic"
+                android:text="@string/items_management_categories"
+                android:textAllCaps="false"
+                android:textColor="@color/md_amber_500"
+                android:textSize="@dimen/primary_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/modifier"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/items_management_bt_size"
+            android:layout_above="@+id/sign_in_by_email"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/items_management_items_margin"
+            android:layout_marginTop="@dimen/items_management_items_margin"
+            android:background="@drawable/custom_button_bg"
+            android:foreground="?selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/modifier_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                app:srcCompat="@drawable/ic_modifier" />
+
+            <TextView
+                android:id="@+id/modifier_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/modifier_ic"
+                android:layout_toRightOf="@+id/modifier_ic"
+                android:text="@string/items_management_modifier"
+                android:textAllCaps="false"
+                android:textColor="@color/md_amber_500"
+                android:textSize="@dimen/primary_text_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/discount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/items_management_bt_size"
+            android:layout_above="@+id/sign_in_by_email"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/items_management_items_margin"
+            android:layout_marginTop="@dimen/items_management_items_margin"
+            android:background="@drawable/custom_button_bg"
+            android:foreground="?selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/discount_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                app:srcCompat="@drawable/ic_discount" />
+
+            <TextView
+                android:id="@+id/discount_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/discount_ic"
+                android:layout_toRightOf="@+id/discount_ic"
+                android:text="@string/items_management_discount"
+                android:textAllCaps="false"
+                android:textColor="@color/md_amber_500"
+                android:textSize="@dimen/primary_text_size" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>
