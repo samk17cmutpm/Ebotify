@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Eboltify</string>
+
+    <!-- Bottom Navigation Name -->
+    <string name="bottom_navigation_home">Home</string>
+    <string name="bottom_navigation_sales">Sales</string>
+    <string name="bottom_navigation_inbox">Inbox</string>
+    <string name="bottom_navigation_reports">Reports</string>
+    <string name="bottom_navigation_more">More</string>
+
+
+</resources>
