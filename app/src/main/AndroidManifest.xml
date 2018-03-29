@@ -26,7 +26,8 @@
         <activity android:name=".ui.main.MainActivity" />
         <activity android:name=".ui.items_management.ItemsManagementActivity" />
         <activity android:name=".ui.items_all.ItemsAllActivity" />
-        <activity android:name=".ui.items_create.ItemsCreateActivity"></activity>
+        <activity android:name=".ui.items_create.ItemsCreateActivity">
+        </activity>
     </application>
 
 </manifest>

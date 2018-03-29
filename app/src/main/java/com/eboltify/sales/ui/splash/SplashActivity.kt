@@ -15,9 +15,7 @@ import io.fabric.sdk.android.Fabric
 
 class SplashActivity : BaseActivity() {
 
-    companion object {
-        val SPLASH_TIME_OUT : Long = 300;
-    }
+    val SPLASH_TIME_OUT : Long = 500;
 
     @BindView(R.id.imgLogo)
     lateinit var mImgLogo: ImageView

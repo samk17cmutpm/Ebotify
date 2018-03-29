@@ -2,21 +2,14 @@ package com.eboltify.sales.ui.items_management
 
 import android.content.Context
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.widget.SwipeRefreshLayout
-import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
-import android.view.View
-import android.view.WindowManager
 import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import com.eboltify.sales.R
 import com.eboltify.sales.ui.base.BaseActivity
 import com.eboltify.sales.ui.items_all.ItemsAllActivity
-import com.eboltify.sales.ui.lib.CCFAnimator
-import com.miguelcatalan.materialsearchview.MaterialSearchView
 
 class ItemsManagementActivity : BaseActivity() {
 

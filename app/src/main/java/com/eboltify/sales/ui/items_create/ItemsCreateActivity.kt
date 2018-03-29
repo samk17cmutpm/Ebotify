@@ -36,7 +36,7 @@ class ItemsCreateActivity : BaseActivity() {
     @BindView(R.id.items_create_categories)
     lateinit var mItemsCreateCategories: MaterialBetterSpinner
 
-    val CATEGORIES = arrayOf("Create New Category", "Fish", "Coffee", "Scream", "Hotpot")
+    private val CATEGORIES = arrayOf("Create New Category", "Fish", "Coffee", "Scream", "Hotpot")
 
     @BindView(R.id.create_item_representation_recylcer_picker)
     lateinit var mCreateItemRepresentationRecylcerPicker: RecyclerView
@@ -44,11 +44,11 @@ class ItemsCreateActivity : BaseActivity() {
     @BindView(R.id.create_item_representation_upload_image)
     lateinit var mCreateItemRepresentationUploadImage: View
 
-    var mColorPickerAdapter: ColorPickerAdapter? = null
+    private var mColorPickerAdapter: ColorPickerAdapter? = null
 
-    var mColorPickers = ArrayList<ColorPicker>()
+    private var mColorPickers = ArrayList<ColorPicker>()
 
-    var mPickedPosition = 0
+    private var mPickedPosition = 0
 
     @BindView(R.id.items_create_representation_by)
     lateinit var mItemsCreateRepresentationBy: RadioGroup
@@ -60,11 +60,7 @@ class ItemsCreateActivity : BaseActivity() {
         ButterKnife.bind(this)
         setSupportActionBar(mToolbar)
         initToolBar(mToolbar, getString(R.string.items_create), R.drawable.ic_move_back)
-        mToolbar.setNavigationOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                onBackPressed()
-            }
-        })
+        mToolbar.setNavigationOnClickListener { onBackPressed() }
         mToolbar.setBackgroundColor(resources.getColor(R.color.md_amber_500))
         mItemsCreateCategories.setAdapter(ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, CATEGORIES))
 

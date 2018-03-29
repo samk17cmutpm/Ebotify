@@ -52,7 +52,7 @@ class MoreFragment : Fragment() {
 
     @OnClick(R.id.more_items)
     fun onClickMoreItems() {
-        ItemsManagementActivity.start(activity)
+        ItemsManagementActivity.start(context)
     }
 
     @OnClick(R.id.customer_care)

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Eboltify</string>
+    <string name="app_name">eboltify</string>
 
     <string name="font_roboto_regular">fonts/roboto_regular.ttf</string>
     <string name="font_roboto_light">fonts/roboto_light.ttf</string>

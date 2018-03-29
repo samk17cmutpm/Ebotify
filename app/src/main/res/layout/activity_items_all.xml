@@ -52,7 +52,8 @@
             app:backgroundTint="@color/md_amber_500"
             app:layout_anchor="@id/item_swipe_refresh_layout"
             app:layout_anchorGravity="bottom|right|end"
-            app:srcCompat="@drawable/ic_create" />
+            app:srcCompat="@drawable/ic_create"
+            android:focusable="true" />
     </android.support.design.widget.CoordinatorLayout>
 
 </RelativeLayout>
