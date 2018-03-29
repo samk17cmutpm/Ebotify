@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Eboltify</string>
 
+    <string name="font_roboto_regular">fonts/roboto_regular.ttf</string>
+    <string name="font_roboto_light">fonts/roboto_light.ttf</string>
+    <string name="font_roboto_medium">fonts/roboto_medium.ttf</string>
+
     <!-- Bottom Navigation Name -->
     <string name="bottom_navigation_home">Home</string>
     <string name="bottom_navigation_sales">Sales</string>

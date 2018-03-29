@@ -52,8 +52,8 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
 
         ButterKnife.bind(this)
-
         mBottomNavigationView.setOnNavigationItemSelectedListener(mOnBottomItemSelectedListener)
+        BottomNavigationViewHelper.removeShiftMode(mBottomNavigationView);
         mMainPagerAdapter = MainPagerAdapter(supportFragmentManager)
         mViewPager.adapter = mMainPagerAdapter
         initItems()

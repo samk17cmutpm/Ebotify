@@ -42,13 +42,15 @@ tools:context="com.eboltify.sales.ui.items_create.ItemsCreateActivity">
                 android:layout_marginTop="@dimen/items_create_margin"
                 android:gravity="center"
                 android:text="@string/items_create_header"
+                fontPath="@string/font_roboto_medium"
                 android:textColor="@color/text_primary"
-                android:textSize="@dimen/header_text_size" />
+                android:textSize="@dimen/header_text_size"
+                tools:ignore="MissingPrefix" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/text_primary">
+                android:theme="@style/EditTextTheme">
 
                 <EditText
                     android:id="@+id/items_create_name"
@@ -57,30 +59,30 @@ tools:context="com.eboltify.sales.ui.items_create.ItemsCreateActivity">
                     android:layout_marginBottom="@dimen/items_create_margin"
                     android:layout_marginTop="@dimen/items_create_margin"
                     android:hint="@string/items_create_please_enter_your_item_name"
-                    android:inputType="text"
+                    android:inputType="textCapSentences"
                     android:maxLines="1"
-                    android:textColor="@color/text_primary"
-                    android:textColorHint="@color/text_primary"
-                    android:textColorLink="@color/text_primary" />
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/secondary_text"
+                    android:theme="@style/EditTextTheme"/>
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/text_primary">
+                android:theme="@style/EditTextTheme">
 
                 <EditText
                     android:id="@+id/items_create_description"
+                    android:theme="@style/EditTextTheme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/items_create_margin"
                     android:layout_marginTop="@dimen/items_create_margin"
                     android:hint="@string/items_create_please_enter_your_item_description"
-                    android:inputType="text"
+                    android:inputType="textCapSentences"
                     android:maxLines="1"
-                    android:textColor="@color/text_primary"
-                    android:textColorHint="@color/text_primary"
-                    android:textColorLink="@color/text_primary" />
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/secondary_text"/>
             </android.support.design.widget.TextInputLayout>
 
             <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
@@ -93,8 +95,8 @@ tools:context="com.eboltify.sales.ui.items_create.ItemsCreateActivity">
                 android:layout_marginTop="@dimen/items_create_margin"
                 android:hint="@string/items_create_categories"
                 app:met_floatingLabel="normal"
-                app:met_floatingLabelTextColor="@color/text_primary"
-                app:met_underlineColor="@color/text_primary" />
+                app:met_floatingLabelTextColor="@color/secondary_text"
+                app:met_underlineColor="@color/secondary_text" />
 
 
             <TextView
@@ -105,7 +107,7 @@ tools:context="com.eboltify.sales.ui.items_create.ItemsCreateActivity">
                 android:layout_marginLeft="@dimen/items_create_margin"
                 android:layout_marginTop="@dimen/items_create_margin"
                 android:text="@string/items_create_sold_by"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/secondary_text"
                 android:textSize="@dimen/primary_text_size" />
 
             <RadioGroup
@@ -114,6 +116,7 @@ tools:context="com.eboltify.sales.ui.items_create.ItemsCreateActivity">
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/items_create_margin"
                 android:layout_marginTop="@dimen/items_create_margin"
+                android:checkedButton="@id/items_create_sold_by_each"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -122,6 +125,7 @@ tools:context="com.eboltify.sales.ui.items_create.ItemsCreateActivity">
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/items_create_margin"
                     android:layout_marginTop="@dimen/items_create_margin"
+                    android:theme="@style/RadioButton"
                     android:text="@string/items_create_sold_by_each" />
 
                 <RadioButton
@@ -130,32 +134,33 @@ tools:context="com.eboltify.sales.ui.items_create.ItemsCreateActivity">
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/items_create_margin"
                     android:layout_marginTop="@dimen/items_create_margin"
+                    android:theme="@style/RadioButton"
                     android:text="@string/witems_create_sold_by_eight" />
             </RadioGroup>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/text_primary">
+                android:theme="@style/EditTextTheme">
 
                 <EditText
                     android:id="@+id/items_create_price"
+                    android:theme="@style/EditTextTheme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/items_create_margin"
                     android:layout_marginTop="@dimen/items_create_margin"
                     android:hint="@string/items_create_please_enter_your_item_price"
-                    android:inputType="text"
+                    android:inputType="numberDecimal"
                     android:maxLines="1"
-                    android:textColor="@color/text_primary"
-                    android:textColorHint="@color/text_primary"
-                    android:textColorLink="@color/text_primary" />
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/secondary_text"/>
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/text_primary">
+                android:theme="@style/EditTextTheme">
 
                 <EditText
                     android:id="@+id/items_create_sku"
@@ -164,11 +169,11 @@ tools:context="com.eboltify.sales.ui.items_create.ItemsCreateActivity">
                     android:layout_marginBottom="@dimen/items_create_margin"
                     android:layout_marginTop="@dimen/items_create_margin"
                     android:hint="@string/items_create_please_enter_your_item_sku"
-                    android:inputType="text"
+                    android:inputType="textCapSentences"
                     android:maxLines="1"
-                    android:textColor="@color/text_primary"
-                    android:textColorHint="@color/text_primary"
-                    android:textColorLink="@color/text_primary" />
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/secondary_text"
+                    android:theme="@style/EditTextTheme" />
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
@@ -190,9 +195,11 @@ tools:context="com.eboltify.sales.ui.items_create.ItemsCreateActivity">
                 android:layout_marginBottom="@dimen/items_create_margin"
                 android:layout_marginTop="@dimen/items_create_margin"
                 android:gravity="center"
+                fontPath="@string/font_roboto_medium"
                 android:text="@string/items_create_representation_header"
                 android:textColor="@color/text_primary"
-                android:textSize="@dimen/header_text_size" />
+                android:textSize="@dimen/header_text_size"
+                tools:ignore="MissingPrefix" />
 
             <RadioGroup
                 android:id="@+id/items_create_representation_by"
@@ -209,6 +216,7 @@ tools:context="com.eboltify.sales.ui.items_create.ItemsCreateActivity">
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/items_create_margin"
                     android:layout_marginTop="@dimen/items_create_margin"
+                    android:theme="@style/RadioButton"
                     android:text="@string/items_create_representation_by_color" />
 
                 <RadioButton
@@ -217,6 +225,7 @@ tools:context="com.eboltify.sales.ui.items_create.ItemsCreateActivity">
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/items_create_margin"
                     android:layout_marginTop="@dimen/items_create_margin"
+                    android:theme="@style/RadioButton"
                     android:text="@string/items_create_representation_by_image" />
             </RadioGroup>
 
@@ -268,7 +277,7 @@ tools:context="com.eboltify.sales.ui.items_create.ItemsCreateActivity">
                             android:layout_toRightOf="@+id/create_item_representation_upload_file_ic"
                             android:text="@string/items_create_representation_upload_file"
                             android:textAllCaps="false"
-                            android:textColor="@color/colorAccent"
+                            android:textColor="@color/md_amber_500"
                             android:textSize="@dimen/primary_text_size" />
                     </RelativeLayout>
 
@@ -305,7 +314,7 @@ tools:context="com.eboltify.sales.ui.items_create.ItemsCreateActivity">
                             android:layout_toRightOf="@+id/create_item_representation_take_photo_ic"
                             android:text="@string/items_create_representation_camera"
                             android:textAllCaps="false"
-                            android:textColor="@color/colorAccent"
+                            android:textColor="@color/md_amber_500"
                             android:textSize="@dimen/primary_text_size" />
                     </RelativeLayout>
                 </LinearLayout>

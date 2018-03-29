@@ -75,6 +75,7 @@ class ItemsCreateActivity : BaseActivity() {
         mColorPickers.add(ColorPicker(R.color.md_cyan_a700, false))
         mColorPickers.add(ColorPicker(R.color.md_teal_a700, false))
         mColorPickers.add(ColorPicker(R.color.md_green_a700, false))
+        mColorPickers.add(ColorPicker(R.color.md_orange_a700, false))
 
         mColorPickerAdapter = ColorPickerAdapter(mColorPickers, applicationContext)
         mCreateItemRepresentationRecylcerPicker.adapter = mColorPickerAdapter
@@ -82,9 +83,9 @@ class ItemsCreateActivity : BaseActivity() {
         mCreateItemRepresentationRecylcerPicker.setHasFixedSize(true)
         mCreateItemRepresentationRecylcerPicker.addItemDecoration(SpacesItemDecoration(5))
 
-        ItemClickSupport.addTo(mCreateItemRepresentationRecylcerPicker).setOnItemClickListener { recyclerView, position, v ->
+        ItemClickSupport.addTo(mCreateItemRepresentationRecylcerPicker).setOnItemClickListener { _, position, _ ->
             if (position != mPickedPosition) {
-                var colorPickerUnPicked = mColorPickers[mPickedPosition]
+                val colorPickerUnPicked = mColorPickers[mPickedPosition]
                 colorPickerUnPicked.picked = !colorPickerUnPicked.picked
                 mColorPickerAdapter?.notifyItemChanged(mPickedPosition)
             }
@@ -96,23 +97,20 @@ class ItemsCreateActivity : BaseActivity() {
             }
         }
 
-        mItemsCreateRepresentationBy.setOnCheckedChangeListener(object : RadioGroup.OnCheckedChangeListener {
-            override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
-                when (checkedId) {
-                    R.id.items_create_representation_by_color -> {
-                        mCreateItemRepresentationUploadImage.visibility = View.GONE
-                        mCreateItemRepresentationRecylcerPicker.visibility = View.VISIBLE
-                    }
-                    R.id.items_create_representation_by_image -> {
-                        mCreateItemRepresentationRecylcerPicker.visibility = View.GONE
-                        mCreateItemRepresentationUploadImage.visibility = View.VISIBLE
-                    }
-                    else -> {
-                    }
+        mItemsCreateRepresentationBy.setOnCheckedChangeListener { group, checkedId ->
+            when (checkedId) {
+                R.id.items_create_representation_by_color -> {
+                    mCreateItemRepresentationUploadImage.visibility = View.GONE
+                    mCreateItemRepresentationRecylcerPicker.visibility = View.VISIBLE
+                }
+                R.id.items_create_representation_by_image -> {
+                    mCreateItemRepresentationRecylcerPicker.visibility = View.GONE
+                    mCreateItemRepresentationUploadImage.visibility = View.VISIBLE
+                }
+                else -> {
                 }
             }
-
-        })
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

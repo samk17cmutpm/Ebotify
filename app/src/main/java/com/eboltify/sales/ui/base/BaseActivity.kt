@@ -1,6 +1,7 @@
 package com.eboltify.sales.ui.base
 
 import android.app.Activity
+import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -13,6 +14,7 @@ import com.eboltify.sales.ui.lib.CCFAnimator
 import com.eboltify.sales.ui.lib.WindowCompat
 import com.eboltify.sales.ui.lib.WindowCompat21
 import com.eboltify.sales.ui.lib.WindowCompatImpl
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 /**
  * Created by sam_nguyen on 3/28/18.
@@ -77,5 +79,9 @@ open class BaseActivity : AppCompatActivity(), BaseViewActions {
         })
         mPrimaryAnimator?.setDuration(250L)
         mPrimaryAnimator?.start()
+    }
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
     }
 }

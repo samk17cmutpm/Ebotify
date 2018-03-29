@@ -13,7 +13,7 @@ import com.eboltify.sales.model.ColorPicker
 /**
  * Created by sam_nguyen on 3/28/18.
  */
-class ColorPickerAdapter(val mColorPickers: List<ColorPicker>, val context: Context)  : RecyclerView.Adapter<ColorPickerAdapter.ViewHolder>() {
+class ColorPickerAdapter(private val mColorPickers: List<ColorPicker>, val context: Context)  : RecyclerView.Adapter<ColorPickerAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         val context = parent?.context
         val inflater = LayoutInflater.from(context)
@@ -31,7 +31,7 @@ class ColorPickerAdapter(val mColorPickers: List<ColorPicker>, val context: Cont
         if (colorPicker.picked) {
             holder?.mPicked?.visibility = View.VISIBLE
         } else {
-            holder?.mPicked?.visibility = View.VISIBLE
+            holder?.mPicked?.visibility = View.INVISIBLE
         }
     }
 

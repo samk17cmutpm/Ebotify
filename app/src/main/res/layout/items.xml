@@ -47,8 +47,10 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:text="TextView"
+            fontPath="@string/font_roboto_light"
             android:textColor="@color/secondary_text"
-            android:textSize="@dimen/primary_text_size" />
+            android:textSize="@dimen/primary_text_size"
+            card_view:ignore="MissingPrefix" />
 
         <ImageView
             android:id="@+id/item_favorite"
@@ -67,6 +69,8 @@
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/item_favorite"
             android:layout_toStartOf="@+id/item_favorite"
+            android:layout_marginLeft="@dimen/items_all_margin"
+            android:layout_marginRight="@dimen/items_all_margin"
             android:textColor="@color/text_primary"
             android:text="20" />
     </RelativeLayout>

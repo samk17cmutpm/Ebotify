@@ -13,4 +13,7 @@
     <color name="secondary_text">#727272</color>
     <color name="text_primary">#000000</color>
 
+    <color name="ed_hint">#727272</color>
+    <color name="ed_activated">#3F51B5</color>
+
 </resources>
