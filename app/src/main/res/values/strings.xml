@@ -45,5 +45,12 @@
     <string name="items_create_representation_upload_file">Upload Image File</string>
     <string name="items_create_representation_camera">Take Photo</string>
 
+    <string name="categories_all">Categories</string>
+
+    <string name="categories_create">Create Category</string>
+    <string name="categories_create_name">Name</string>
+    <string name="categories_create_description">Category Description</string>
+    <string name="categories_create_color">Category Color</string>
+
 
 </resources>

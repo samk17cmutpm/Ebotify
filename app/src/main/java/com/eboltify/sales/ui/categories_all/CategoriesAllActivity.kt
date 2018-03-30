@@ -1,7 +1,8 @@
-package com.eboltify.sales.ui.items_all
+package com.eboltify.sales.ui.categories_all
 
 import android.content.Context
 import android.content.Intent
+import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v4.widget.SwipeRefreshLayout
@@ -14,18 +15,18 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import com.eboltify.sales.R
-import com.eboltify.sales.model.Item
+import com.eboltify.sales.model.Category
 import com.eboltify.sales.ui.base.BaseActivity
-import com.eboltify.sales.ui.items_create.ItemsCreateActivity
+import com.eboltify.sales.ui.categories_create.CategoriesCreateActivity
 import com.eboltify.sales.ui.lib.SpacesItemDecoration
 import com.miguelcatalan.materialsearchview.MaterialSearchView
 
-class ItemsAllActivity : BaseActivity() {
+class CategoriesAllActivity : BaseActivity() {
 
     companion object {
         fun start(context: Context) {
-            val intent = Intent(context, ItemsAllActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            val intent = Intent(context, CategoriesAllActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(intent)
         }
     }
@@ -40,21 +41,22 @@ class ItemsAllActivity : BaseActivity() {
     lateinit var mSwipeRefreshLayout: SwipeRefreshLayout
 
     @BindView(R.id.recycler_view)
-    lateinit var mItemRecyclerView: RecyclerView
+    lateinit var mRecyclerView: RecyclerView
 
-    var mItems = ArrayList<Item>()
+    private var mCategories = ArrayList<Category>()
 
-    private var mAllItemsAdapter: AllItemsAdapter? = null
+    private var mCategoriesAdapter: CategoriesAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_items_all)
+        setContentView(R.layout.activity_categories_all)
+
         changeStatusBarColor(ContextCompat.getColor(applicationContext, R.color.md_amber_500))
         ButterKnife.bind(this)
 
         setSupportActionBar(mToolbar)
 
-        initToolBar(mToolbar, getString(R.string.more_items), R.drawable.ic_move_back)
+        initToolBar(mToolbar, getString(R.string.categories_all), R.drawable.ic_move_back)
 
         mToolbar.setNavigationOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
@@ -87,18 +89,16 @@ class ItemsAllActivity : BaseActivity() {
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light)
 
-        mItems = java.util.ArrayList()
         for (index in 0..99) {
-            mItems.add(Item())
+            mCategories.add(Category())
         }
 
-        mAllItemsAdapter = AllItemsAdapter(mItems)
-        mItemRecyclerView.adapter = mAllItemsAdapter
-        mItemRecyclerView.layoutManager = LinearLayoutManager(this)
-        mItemRecyclerView.setHasFixedSize(true)
-        mItemRecyclerView.addItemDecoration(SpacesItemDecoration(1))
+        mCategoriesAdapter = CategoriesAdapter(mCategories)
+        mRecyclerView.adapter = mCategoriesAdapter
+        mRecyclerView.layoutManager = LinearLayoutManager(this)
+        mRecyclerView.setHasFixedSize(true)
+        mRecyclerView.addItemDecoration(SpacesItemDecoration(1))
     }
-
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_items_search, menu)
@@ -109,6 +109,6 @@ class ItemsAllActivity : BaseActivity() {
 
     @OnClick(R.id.create)
     fun onClickItemCreate() {
-        ItemsCreateActivity.start(this)
+        CategoriesCreateActivity.start(this)
     }
 }

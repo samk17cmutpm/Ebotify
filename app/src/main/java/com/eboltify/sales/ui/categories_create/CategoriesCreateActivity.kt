@@ -1,7 +1,8 @@
-package com.eboltify.sales.ui.items_create
+package com.eboltify.sales.ui.categories_create
 
 import android.content.Context
 import android.content.Intent
+import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.GridLayoutManager
@@ -9,23 +10,20 @@ import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.RadioGroup
 import butterknife.BindView
 import butterknife.ButterKnife
 import com.eboltify.sales.R
 import com.eboltify.sales.model.ColorPicker
 import com.eboltify.sales.ui.base.BaseActivity
+import com.eboltify.sales.ui.items_create.ColorPickerAdapter
 import com.eboltify.sales.ui.lib.ItemClickSupport
 import com.eboltify.sales.ui.lib.SpacesItemDecoration
-import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
 
-class ItemsCreateActivity : BaseActivity() {
+class CategoriesCreateActivity : BaseActivity() {
 
     companion object {
         fun start(context: Context) {
-            val intent = Intent(context, ItemsCreateActivity::class.java)
+            val intent = Intent(context, CategoriesCreateActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             context.startActivity(intent)
         }
@@ -34,16 +32,8 @@ class ItemsCreateActivity : BaseActivity() {
     @BindView(R.id.toolbar)
     lateinit var mToolbar: Toolbar
 
-    @BindView(R.id.items_create_categories)
-    lateinit var mItemsCreateCategories: MaterialBetterSpinner
-
-    private val CATEGORIES = arrayOf("Create New Category", "Fish", "Coffee", "Scream", "Hotpot")
-
-    @BindView(R.id.create_item_representation_recylcer_picker)
-    lateinit var mCreateItemRepresentationRecylcerPicker: RecyclerView
-
-    @BindView(R.id.create_item_representation_upload_image)
-    lateinit var mCreateItemRepresentationUploadImage: View
+    @BindView(R.id.recylcer_color_picker)
+    lateinit var mRecylcerColorPicker: RecyclerView
 
     private var mColorPickerAdapter: ColorPickerAdapter? = null
 
@@ -51,19 +41,16 @@ class ItemsCreateActivity : BaseActivity() {
 
     private var mPickedPosition = 0
 
-    @BindView(R.id.items_create_representation_by)
-    lateinit var mItemsCreateRepresentationBy: RadioGroup
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_items_create)
+        setContentView(R.layout.activity_categories_create)
         changeStatusBarColor(ContextCompat.getColor(applicationContext, R.color.md_amber_500))
         ButterKnife.bind(this)
         setSupportActionBar(mToolbar)
-        initToolBar(mToolbar, getString(R.string.items_create), R.drawable.ic_move_back)
+        initToolBar(mToolbar, getString(R.string.categories_create), R.drawable.ic_move_back)
         mToolbar.setNavigationOnClickListener { onBackPressed() }
         mToolbar.setBackgroundColor(ContextCompat.getColor(applicationContext, R.color.md_amber_500))
-        mItemsCreateCategories.setAdapter(ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, CATEGORIES))
 
         mColorPickers.add(ColorPicker(R.color.md_red_a700, true))
         mColorPickers.add(ColorPicker(R.color.md_orange_a700, false))
@@ -75,12 +62,12 @@ class ItemsCreateActivity : BaseActivity() {
         mColorPickers.add(ColorPicker(R.color.md_orange_a700, false))
 
         mColorPickerAdapter = ColorPickerAdapter(mColorPickers, applicationContext)
-        mCreateItemRepresentationRecylcerPicker.adapter = mColorPickerAdapter
-        mCreateItemRepresentationRecylcerPicker.layoutManager = GridLayoutManager(this, 4)
-        mCreateItemRepresentationRecylcerPicker.setHasFixedSize(true)
-        mCreateItemRepresentationRecylcerPicker.addItemDecoration(SpacesItemDecoration(5))
+        mRecylcerColorPicker.adapter = mColorPickerAdapter
+        mRecylcerColorPicker.layoutManager = GridLayoutManager(this, 4)
+        mRecylcerColorPicker.setHasFixedSize(true)
+        mRecylcerColorPicker.addItemDecoration(SpacesItemDecoration(5))
 
-        ItemClickSupport.addTo(mCreateItemRepresentationRecylcerPicker).setOnItemClickListener { _, position, _ ->
+        ItemClickSupport.addTo(mRecylcerColorPicker).setOnItemClickListener { _, position, _ ->
             if (position != mPickedPosition) {
                 val colorPickerUnPicked = mColorPickers[mPickedPosition]
                 colorPickerUnPicked.picked = !colorPickerUnPicked.picked
@@ -94,20 +81,6 @@ class ItemsCreateActivity : BaseActivity() {
             }
         }
 
-        mItemsCreateRepresentationBy.setOnCheckedChangeListener { _, checkedId ->
-            when (checkedId) {
-                R.id.items_create_representation_by_color -> {
-                    mCreateItemRepresentationUploadImage.visibility = View.GONE
-                    mCreateItemRepresentationRecylcerPicker.visibility = View.VISIBLE
-                }
-                R.id.items_create_representation_by_image -> {
-                    mCreateItemRepresentationRecylcerPicker.visibility = View.GONE
-                    mCreateItemRepresentationUploadImage.visibility = View.VISIBLE
-                }
-                else -> {
-                }
-            }
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -15,6 +15,7 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="28a0fb5a03e7db37953a5e3e2bea3eafd6a64933" />
+
         <activity android:name=".ui.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,8 +27,9 @@
         <activity android:name=".ui.main.MainActivity" />
         <activity android:name=".ui.items_management.ItemsManagementActivity" />
         <activity android:name=".ui.items_all.ItemsAllActivity" />
-        <activity android:name=".ui.items_create.ItemsCreateActivity">
-        </activity>
+        <activity android:name=".ui.items_create.ItemsCreateActivity" />
+        <activity android:name=".ui.categories_all.CategoriesAllActivity" />
+        <activity android:name=".ui.categories_create.CategoriesCreateActivity"></activity>
     </application>
 
 </manifest>

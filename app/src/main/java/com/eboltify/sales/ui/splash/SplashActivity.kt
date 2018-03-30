@@ -15,7 +15,7 @@ import io.fabric.sdk.android.Fabric
 
 class SplashActivity : BaseActivity() {
 
-    val SPLASH_TIME_OUT : Long = 500;
+    private val SPLASH_TIME_OUT : Long = 500;
 
     @BindView(R.id.imgLogo)
     lateinit var mImgLogo: ImageView
@@ -33,7 +33,7 @@ class SplashActivity : BaseActivity() {
         Handler().postDelayed(Runnable { startMainActivity() }, SPLASH_TIME_OUT)
     }
 
-    fun startMainActivity() {
+    private fun startMainActivity() {
         MainActivity.start(this)
         finish()
     }

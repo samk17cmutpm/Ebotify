@@ -81,7 +81,7 @@ class MainActivity : BaseActivity() {
                     mWindowCompat.setStatusBarColor(color)
                 }
                 )
-                mPrimaryAnimator?.setDuration(250L)
+                mPrimaryAnimator?.duration = 250L
                 mPrimaryAnimator?.start()
 
                 val accent = CCFAnimator.rgb(
@@ -93,7 +93,7 @@ class MainActivity : BaseActivity() {
                     mBottomNavigationView.setBackgroundColor(color)
                 })
 
-                mAccentAnimator?.setDuration(250L)
+                mAccentAnimator?.duration = 250L
                 mAccentAnimator?.start()
 
                 mPrimaryColor = item.primaryColor
@@ -183,7 +183,7 @@ class MainActivity : BaseActivity() {
 
     class MainPagerAdapter constructor(fragmenetManager: android.support.v4.app.FragmentManager?) : SmartFragmentStatePagerAdapter(fragmenetManager) {
 
-        val TOTAL_PAGES = 5;
+        private val TOTAL_PAGES = 5;
 
         override fun getCount(): Int {
             return TOTAL_PAGES

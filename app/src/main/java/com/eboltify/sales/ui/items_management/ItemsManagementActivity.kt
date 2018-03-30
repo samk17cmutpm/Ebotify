@@ -3,12 +3,14 @@ package com.eboltify.sales.ui.items_management
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.Toolbar
 import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import com.eboltify.sales.R
 import com.eboltify.sales.ui.base.BaseActivity
+import com.eboltify.sales.ui.categories_all.CategoriesAllActivity
 import com.eboltify.sales.ui.items_all.ItemsAllActivity
 
 class ItemsManagementActivity : BaseActivity() {
@@ -27,10 +29,10 @@ class ItemsManagementActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_items_management)
-        changeStatusBarColor(resources.getColor(R.color.md_amber_500))
+        changeStatusBarColor(ContextCompat.getColor(applicationContext, R.color.md_amber_500))
         ButterKnife.bind(this)
         initToolBar(mToolbar, getString(R.string.more_items), R.drawable.ic_move_back)
-        mToolbar.setBackgroundColor(resources.getColor(R.color.md_amber_500))
+        mToolbar.setBackgroundColor(ContextCompat.getColor(applicationContext, R.color.md_amber_500))
         mToolbar.setNavigationOnClickListener {
             onBackPressed()
         }
@@ -43,7 +45,7 @@ class ItemsManagementActivity : BaseActivity() {
 
     @OnClick(R.id.categories)
     fun onClickCategories() {
-
+        CategoriesAllActivity.start(this)
     }
 
     @OnClick(R.id.modifier)
