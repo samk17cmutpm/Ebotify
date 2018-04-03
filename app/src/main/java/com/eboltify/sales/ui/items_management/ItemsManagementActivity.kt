@@ -13,6 +13,7 @@ import com.eboltify.sales.ui.base.BaseActivity
 import com.eboltify.sales.ui.categories_all.CategoriesAllActivity
 import com.eboltify.sales.ui.discount.DiscountActivity
 import com.eboltify.sales.ui.items_all.ItemsAllActivity
+import com.eboltify.sales.ui.modifiers.ModifiersActivity
 
 class ItemsManagementActivity : BaseActivity() {
 
@@ -51,7 +52,7 @@ class ItemsManagementActivity : BaseActivity() {
 
     @OnClick(R.id.modifier)
     fun onClickModifier() {
-
+        ModifiersActivity.start(this)
     }
 
     @OnClick(R.id.discount)

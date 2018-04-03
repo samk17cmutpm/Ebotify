@@ -62,4 +62,10 @@
     <string name="discounts_by_percent">%</string>
     <string name="discounts_by_unit">$</string>
 
+    <!-- Modifiers -->
+    <string name="modifiers">Modifiers</string>
+    <string name="modifiers_create_description">Modifiers Description</string>
+    <string name="modifiers_create">Create Modifier</string>
+    <string name="modifiers_create_name">Name</string>
+
 </resources>

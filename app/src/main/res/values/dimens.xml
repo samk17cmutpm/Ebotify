@@ -38,6 +38,7 @@
 
     <!-- Discount -->
     <dimen name="discount_height">50dp</dimen>
+    <dimen name="modifiers_height">50dp</dimen>
 
     <!-- Color Picker -->
     <dimen name="color_picker_size">100dp</dimen>
