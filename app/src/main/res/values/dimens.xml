@@ -36,6 +36,9 @@
     <dimen name="items_create_padding">10dp</dimen>
     <dimen name="items_create_margin">5dp</dimen>
 
+    <!-- Discount -->
+    <dimen name="discount_height">50dp</dimen>
+
     <!-- Color Picker -->
     <dimen name="color_picker_size">100dp</dimen>
 </resources>

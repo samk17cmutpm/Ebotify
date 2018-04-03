@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.categories_create.CategoriesCreateActivity">
+    tools:context=".ui.discount_create.DiscountCreateActivity">
 
     <include layout="@layout/toolbar"
         android:id="@+id/toolbar" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -44,7 +43,7 @@
                     android:layout_marginBottom="@dimen/items_create_margin"
                     android:layout_marginTop="@dimen/items_create_margin"
                     android:gravity="center"
-                    android:text="@string/categories_create_description"
+                    android:text="@string/discounts_create_description"
                     android:textColor="@color/text_primary"
                     android:textSize="@dimen/header_text_size"
                     tools:ignore="MissingPrefix" />
@@ -60,7 +59,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/items_create_margin"
                         android:layout_marginTop="@dimen/items_create_margin"
-                        android:hint="@string/categories_create_name"
+                        android:hint="@string/discounts_name"
                         android:inputType="textCapSentences"
                         android:maxLines="1"
                         android:textColor="@color/primary_text"
@@ -68,41 +67,64 @@
                         android:theme="@style/EditTextTheme" />
                 </android.support.design.widget.TextInputLayout>
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/representation"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/items_create_margin"
-                android:layout_marginTop="@dimen/items_create_margin"
-                android:layout_below="@+id/toolbar"
-                android:layout_centerHorizontal="true"
-                android:background="@color/white"
-                android:orientation="vertical"
-                android:padding="@dimen/items_create_padding">
-
                 <TextView
-                    android:id="@+id/header_color"
-                    fontPath="@string/font_roboto_medium"
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/items_create_margin"
+                    android:layout_marginLeft="@dimen/items_create_margin"
+                    android:layout_marginTop="@dimen/items_create_margin"
+                    android:text="@string/discounts_by"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/primary_text_size" />
+
+
+                <RadioGroup
+                    android:id="@+id/discount_by"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/items_create_margin"
                     android:layout_marginTop="@dimen/items_create_margin"
-                    android:gravity="center"
-                    android:text="@string/categories_create_color"
-                    android:textColor="@color/text_primary"
-                    android:textSize="@dimen/header_text_size"
-                    tools:ignore="MissingPrefix" />
+                    android:checkedButton="@id/items_create_representation_by_color"
+                    android:orientation="horizontal">
 
-                <RelativeLayout
+                    <RadioButton
+                        android:id="@+id/discount_by_percent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/items_create_margin"
+                        android:layout_marginTop="@dimen/items_create_margin"
+                        android:theme="@style/RadioButton"
+                        android:text="@string/discounts_by_percent" />
+
+                    <RadioButton
+                        android:id="@+id/discount_by_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/items_create_margin"
+                        android:layout_marginTop="@dimen/items_create_margin"
+                        android:theme="@style/RadioButton"
+                        android:text="@string/discounts_by_unit" />
+                </RadioGroup>
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="300dp">
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/recylcer_color_picker"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextTheme">
+
+                    <EditText
+                        android:id="@+id/value"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-                </RelativeLayout>
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/items_create_margin"
+                        android:layout_marginTop="@dimen/items_create_margin"
+                        android:hint="@string/discounts_value"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:textColor="@color/primary_text"
+                        android:textColorHint="@color/secondary_text"
+                        android:theme="@style/EditTextTheme" />
+                </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
 

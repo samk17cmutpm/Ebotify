@@ -111,7 +111,7 @@ class ItemsCreateActivity : BaseActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_items_create, menu)
+        menuInflater.inflate(R.menu.menu_create, menu)
         return true
     }
 

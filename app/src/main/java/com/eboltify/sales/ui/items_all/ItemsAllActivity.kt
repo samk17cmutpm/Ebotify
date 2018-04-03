@@ -101,7 +101,7 @@ class ItemsAllActivity : BaseActivity() {
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_items_search, menu)
+        menuInflater.inflate(R.menu.menu_search, menu)
         val item = menu.findItem(R.id.search)
         mMaterialSearchView.setMenuItem(item)
         return true

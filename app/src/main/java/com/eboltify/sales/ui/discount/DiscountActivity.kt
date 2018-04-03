@@ -1,4 +1,4 @@
-package com.eboltify.sales.ui.categories_all
+package com.eboltify.sales.ui.discount
 
 import android.content.Context
 import android.content.Intent
@@ -14,17 +14,17 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import com.eboltify.sales.R
-import com.eboltify.sales.model.Category
+import com.eboltify.sales.model.Discount
 import com.eboltify.sales.ui.base.BaseActivity
-import com.eboltify.sales.ui.categories_create.CategoriesCreateActivity
+import com.eboltify.sales.ui.discount_create.DiscountCreateActivity
 import com.eboltify.sales.ui.lib.SpacesItemDecoration
 import com.miguelcatalan.materialsearchview.MaterialSearchView
 
-class CategoriesAllActivity : BaseActivity() {
+class DiscountActivity : BaseActivity() {
 
     companion object {
         fun start(context: Context) {
-            val intent = Intent(context, CategoriesAllActivity::class.java)
+            val intent = Intent(context, DiscountActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(intent)
         }
@@ -42,20 +42,20 @@ class CategoriesAllActivity : BaseActivity() {
     @BindView(R.id.recycler_view)
     lateinit var mRecyclerView: RecyclerView
 
-    private var mCategories = ArrayList<Category>()
+    private var mDiscounts = ArrayList<Discount>()
 
-    private var mCategoriesAdapter: CategoriesAdapter? = null
+    private var mDiscountAdapter: DiscountAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_categories_all)
+        setContentView(R.layout.activity_discount)
 
         changeStatusBarColor(ContextCompat.getColor(applicationContext, R.color.md_amber_500))
         ButterKnife.bind(this)
 
         setSupportActionBar(mToolbar)
 
-        initToolBar(mToolbar, getString(R.string.categories_all), R.drawable.ic_move_back)
+        initToolBar(mToolbar, getString(R.string.discounts), R.drawable.ic_move_back)
 
         mToolbar.setNavigationOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
@@ -89,11 +89,11 @@ class CategoriesAllActivity : BaseActivity() {
                 android.R.color.holo_red_light)
 
         for (index in 0..99) {
-            mCategories.add(Category())
+            mDiscounts.add(Discount())
         }
 
-        mCategoriesAdapter = CategoriesAdapter(mCategories)
-        mRecyclerView.adapter = mCategoriesAdapter
+        mDiscountAdapter = DiscountAdapter(mDiscounts)
+        mRecyclerView.adapter = mDiscountAdapter
         mRecyclerView.layoutManager = LinearLayoutManager(this)
         mRecyclerView.setHasFixedSize(true)
         mRecyclerView.addItemDecoration(SpacesItemDecoration(1))
@@ -108,6 +108,6 @@ class CategoriesAllActivity : BaseActivity() {
 
     @OnClick(R.id.create)
     fun onClickItemCreate() {
-        CategoriesCreateActivity.start(this)
+        DiscountCreateActivity.start(this)
     }
 }

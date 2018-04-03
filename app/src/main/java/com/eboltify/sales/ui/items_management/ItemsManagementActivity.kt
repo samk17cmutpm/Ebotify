@@ -11,6 +11,7 @@ import butterknife.OnClick
 import com.eboltify.sales.R
 import com.eboltify.sales.ui.base.BaseActivity
 import com.eboltify.sales.ui.categories_all.CategoriesAllActivity
+import com.eboltify.sales.ui.discount.DiscountActivity
 import com.eboltify.sales.ui.items_all.ItemsAllActivity
 
 class ItemsManagementActivity : BaseActivity() {
@@ -55,6 +56,6 @@ class ItemsManagementActivity : BaseActivity() {
 
     @OnClick(R.id.discount)
     fun onClickDiscount() {
-
+        DiscountActivity.start(this)
     }
 }

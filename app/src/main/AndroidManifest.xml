@@ -29,7 +29,9 @@
         <activity android:name=".ui.items_all.ItemsAllActivity" />
         <activity android:name=".ui.items_create.ItemsCreateActivity" />
         <activity android:name=".ui.categories_all.CategoriesAllActivity" />
-        <activity android:name=".ui.categories_create.CategoriesCreateActivity"></activity>
+        <activity android:name=".ui.categories_create.CategoriesCreateActivity" />
+        <activity android:name=".ui.discount.DiscountActivity" />
+        <activity android:name=".ui.discount_create.DiscountCreateActivity"></activity>
     </application>
 
 </manifest>

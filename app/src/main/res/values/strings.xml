@@ -52,5 +52,14 @@
     <string name="categories_create_description">Category Description</string>
     <string name="categories_create_color">Category Color</string>
 
+    <!-- Discount -->
+    <string name="discounts">Discounts</string>
+    <string name="discounts_create_description">Discount Description</string>
+    <string name="discounts_create">Create Discount</string>
+    <string name="discounts_name">Name</string>
+    <string name="discounts_value">Value</string>
+    <string name="discounts_by">Discount By</string>
+    <string name="discounts_by_percent">%</string>
+    <string name="discounts_by_unit">$</string>
 
 </resources>
