@@ -68,4 +68,6 @@
     <string name="modifiers_create">Create Modifier</string>
     <string name="modifiers_create_name">Name</string>
 
+    <string name="modifiers_create_options">Options</string>
+
 </resources>

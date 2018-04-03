@@ -65,18 +65,43 @@
                         android:textColorHint="@color/secondary_text"
                         android:theme="@style/EditTextTheme" />
                 </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/options"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/items_create_margin"
+                android:layout_marginTop="@dimen/items_create_margin"
+                android:layout_below="@+id/toolbar"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/items_create_padding"
+                android:visibility="visible">
 
-                <android.support.design.widget.TextInputLayout
+                <TextView
+                    android:id="@+id/options_header"
+                    fontPath="@string/font_roboto_medium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/EditTextTheme">
+                    android:layout_marginBottom="@dimen/items_create_margin"
+                    android:layout_marginTop="@dimen/items_create_margin"
+                    android:gravity="center"
+                    android:text="@string/modifiers_create_options"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/header_text_size"
+                    tools:ignore="MissingPrefix" />
 
-                </android.support.design.widget.TextInputLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
+
 </RelativeLayout>

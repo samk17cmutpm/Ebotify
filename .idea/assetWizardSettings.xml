@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/home/sam_nguyen/android_studio_3_0/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/editor/ic_format_list_bulleted_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/home/sam_nguyen/android_studio_3_0/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_delete_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,12 +28,10 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="ffc400" />
-                            <entry key="height" value="36" />
-                            <entry key="outputName" value="ic_modifiers_details" />
+                            <entry key="color" value="ff0010" />
+                            <entry key="outputName" value="ic_option_delete" />
                             <entry key="overrideSize" value="true" />
                             <entry key="sourceFile" value="$USER_HOME$" />
-                            <entry key="width" value="36" />
                           </map>
                         </option>
                       </PersistentState>

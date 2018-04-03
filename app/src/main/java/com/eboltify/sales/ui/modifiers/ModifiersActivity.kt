@@ -58,11 +58,7 @@ class ModifiersActivity : BaseActivity() {
 
         initToolBar(mToolbar, getString(R.string.modifiers), R.drawable.ic_move_back)
 
-        mToolbar.setNavigationOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                onBackPressed()
-            }
-        })
+        mToolbar.setNavigationOnClickListener { onBackPressed() }
         mToolbar.setBackgroundColor(ContextCompat.getColor(applicationContext, R.color.md_amber_500))
 
         mMaterialSearchView.setOnQueryTextListener(object : MaterialSearchView.OnQueryTextListener {

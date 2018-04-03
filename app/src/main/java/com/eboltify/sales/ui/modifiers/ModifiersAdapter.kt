@@ -8,7 +8,7 @@ import butterknife.ButterKnife
 import com.eboltify.sales.R
 import com.eboltify.sales.model.Modifier
 
-class ModifiersAdapter(val mModifiers: List<Modifier>) : RecyclerView.Adapter<ModifiersAdapter.ViewHolder>() {
+class ModifiersAdapter(private val mModifiers: List<Modifier>) : RecyclerView.Adapter<ModifiersAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         val context = parent?.context
         val inflater = LayoutInflater.from(context)

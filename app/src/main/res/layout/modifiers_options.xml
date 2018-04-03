@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="0dp"
+    card_view:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/modifiers_height"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/options_modifiers_padding">
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_option_delete"
+            android:layout_alignParentRight="true" />
+
+        <EditText
+            android:id="@+id/money"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/delete"
+            android:theme="@style/EditTextTheme"
+            android:ems="10"
+            android:hint="$"
+            android:inputType="numberDecimal"
+            android:layout_toLeftOf="@+id/delete" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/money"
+            android:theme="@style/EditTextTheme"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Name"
+            android:layout_toLeftOf="@+id/money" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

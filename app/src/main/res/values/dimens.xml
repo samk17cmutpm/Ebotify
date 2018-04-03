@@ -42,4 +42,6 @@
 
     <!-- Color Picker -->
     <dimen name="color_picker_size">100dp</dimen>
+
+    <dimen name="options_modifiers_padding">5dp</dimen>
 </resources>
