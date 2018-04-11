@@ -5,11 +5,6 @@ package com.eboltify.sales.ui.base
  */
 interface BaseView {
     /**
-     * Initialize Dependency Injections
-     */
-    fun initDI()
-
-    /**
      * Initialize UI
      */
     fun initUI()

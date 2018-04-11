@@ -33,7 +33,8 @@
         <activity android:name=".ui.discount.DiscountActivity" />
         <activity android:name=".ui.discount_create.DiscountCreateActivity" />
         <activity android:name=".ui.modifiers.ModifiersActivity" />
-        <activity android:name=".ui.modifiers_create.ModifiersCreateActivity"></activity>
+        <activity android:name=".ui.modifiers_create.ModifiersCreateActivity" />
+        <activity android:name=".ui.sign_in.SignInActivity"></activity>
     </application>
 
 </manifest>

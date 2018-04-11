@@ -10,6 +10,7 @@ import com.crashlytics.android.Crashlytics
 import com.eboltify.sales.R
 import com.eboltify.sales.ui.base.BaseActivity
 import com.eboltify.sales.ui.main.MainActivity
+import com.eboltify.sales.ui.sign_in.SignInActivity
 import io.fabric.sdk.android.Fabric
 
 
@@ -34,7 +35,7 @@ class SplashActivity : BaseActivity() {
     }
 
     private fun startMainActivity() {
-        MainActivity.start(this)
+        SignInActivity.start(this)
         finish()
     }
 }

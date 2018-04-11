@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke android:width="@dimen/custom_button_bg_stroke" android:color="@color/white" />
+    <gradient android:startColor="@color/md_amber_500" android:endColor="@color/md_amber_500"
+        android:angle="225"/>
+
+    <corners android:bottomRightRadius="@dimen/custom_button_bg_radius" android:bottomLeftRadius="@dimen/custom_button_bg_radius"
+        android:topLeftRadius="@dimen/custom_button_bg_radius" android:topRightRadius="@dimen/custom_button_bg_radius"/>
+</shape>
