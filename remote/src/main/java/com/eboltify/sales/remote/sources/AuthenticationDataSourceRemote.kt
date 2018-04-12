@@ -10,8 +10,9 @@ import com.eboltify.sales.remote.services.AuthenticationService
 import io.reactivex.Flowable
 import io.reactivex.functions.Function
 import retrofit2.Response
+import javax.inject.Inject
 
-class AuthenticationDataSourceRemote constructor(private val mAuthenticationService: AuthenticationService) : AuthenticationSourceRemote {
+class AuthenticationDataSourceRemote @Inject constructor(private val mAuthenticationService: AuthenticationService) : AuthenticationSourceRemote {
     override fun signIn(uuid: String, email: String, password: String): Flowable<UserInfoData> {
         return mAuthenticationService.fetchUserInfo(UserInfoRequest(uuid, email, password))
                 .map(object : Function<Response<UserInfoResponse>, UserInfoData> {

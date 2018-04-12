@@ -15,19 +15,14 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import com.eboltify.sales.R
-import com.eboltify.sales.data.repositories.AuthenticationDataRepository
-import com.eboltify.sales.domain.interactors.authentication.SignInInterator
-import com.eboltify.sales.domain.repositories.AuthenticationRepository
-import com.eboltify.sales.remote.net.ServiceGenerator
-import com.eboltify.sales.remote.services.AuthenticationService
-import com.eboltify.sales.remote.sources.AuthenticationDataSourceRemote
 import com.eboltify.sales.ui.base.BaseActivity
 import com.eboltify.sales.ui.main.MainActivity
 import com.eboltify.sales.utils.ValidationUtils
+import javax.inject.Inject
 
 class SignInActivity : BaseActivity(), SignInContract.View {
 
-
+    @Inject
     lateinit var mPresenter: SignInContract.Presenter
 
     companion object {
@@ -55,8 +50,10 @@ class SignInActivity : BaseActivity(), SignInContract.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
+        DaggerSignInComponent.builder()
+                .signInModule(SignInModule(this))
+                .build().inject(this)
         initUI()
-        mPresenter = SignInPresenter(this, SignInInterator(AuthenticationDataRepository(AuthenticationDataSourceRemote(ServiceGenerator.createService(AuthenticationService::class.java)))))
     }
 
     override fun validateInputs(): Boolean {

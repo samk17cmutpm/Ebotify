@@ -6,6 +6,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation 'io.reactivex.rxjava2:rxkotlin:2.2.0'
     implementation project(':domain')
+
 }
 
 sourceCompatibility = "1.7"
